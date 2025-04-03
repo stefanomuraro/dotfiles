@@ -11,3 +11,8 @@ alias amend="git commit --amend --no-edit"
 
 # Dotfiles
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+
+# Github
+alias ghpr="gh pr create --base develop && gh pr view --web"
+alias ghprui="gh pr create --repo mbahealthgroup/ohmd-ui --base develop && gh repo set-default mbahealthgroup/ohmd-ui && gh pr view --web"
+
