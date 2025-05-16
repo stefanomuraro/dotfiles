@@ -3,8 +3,16 @@ killport() {
 }
 
 cleanrepo() {
-  gfa && gbg &&
+  gfa
 
+  gone_branches=$(gbg)
+
+  if [[ -z "$gone_branches" ]]; then
+    echo "No branches to delete"
+    return
+  fi
+
+  echo "$gone_branches"
   print -n "Do you want to delete all gone branches? (y/n): "
   read choice
 
@@ -12,3 +20,4 @@ cleanrepo() {
     gbgD
   fi
 }
+
