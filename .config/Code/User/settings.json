@@ -35,6 +35,8 @@
     "vim.leader": "<space>",
     "vim.smartRelativeLine": true,
     "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
+    "vim.sneak": true,
     "vim.visualModeKeyBindingsNonRecursive": [
         {
             "before": [
