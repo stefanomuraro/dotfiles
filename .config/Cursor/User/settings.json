@@ -48,15 +48,6 @@
         },
         {
             "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<ESC>"
-            ]
-        },
-        {
-            "before": [
                 ">"
             ],
             "commands": [
