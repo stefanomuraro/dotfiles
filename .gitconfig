@@ -9,3 +9,9 @@
 	editor = nvim
 [push]
 	autoSetupRemote = true
+[diff]
+	tool = nvimdiff
+[difftool "vscode"]
+	cmd = code --wait --diff \"\" \"\"
+[difftool]
+	prompt = true
