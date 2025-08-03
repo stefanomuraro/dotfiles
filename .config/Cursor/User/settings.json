@@ -1,13 +1,11 @@
 {
     "breadcrumbs.enabled": false,
-    "diffEditor.hideUnchangedRegions.enabled": true,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "diffEditor.renderSideBySide": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.renderSideBySide": false,
     "editor.cursorBlinking": "phase",
     "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
-    "editor.formatOnSave": true,
     "editor.guides.indentation": false,
     "editor.letterSpacing": 0.4,
     "editor.lineHeight": 22,
@@ -186,25 +184,6 @@
         {
             "before": [
                 "<leader>",
-                "i"
-            ],
-            "commands": [
-                {
-                    "command": "vim.remap",
-                    "args": {
-                        "after": [
-                            "g",
-                            "g",
-                            "=",
-                            "G"
-                        ]
-                    }
-                }
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
                 "f"
             ],
             "commands": [
@@ -214,7 +193,6 @@
         {
             "before": [
                 "<leader>",
-                "q",
                 "q"
             ],
             "commands": [
@@ -224,8 +202,7 @@
         {
             "before": [
                 "<leader>",
-                "q",
-                "a"
+                "Q",
             ],
             "commands": [
                 "workbench.action.closeAllEditors"
@@ -291,5 +268,9 @@
                 }
             ]
         }
-    ]
+    ],
+    "cursor.composer.shouldAutoScrollToBottom": false,
+    "cursor.composer.shouldChimeAfterChatFinishes": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always"
 }
