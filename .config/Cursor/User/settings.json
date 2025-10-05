@@ -1,5 +1,4 @@
 {
-    "breadcrumbs.enabled": false,
     "diffEditor.ignoreTrimWhitespace": true,
     "diffEditor.renderSideBySide": false,
     "editor.cursorBlinking": "phase",
@@ -26,251 +25,30 @@
     "window.newWindowProfile": "Default",
     "window.title": "${rootName}",
     "workbench.activityBar.location": "hidden",
-    "workbench.editor.showTabs": "single",
     "workbench.layoutControl.enabled": false,
     "workbench.sideBar.location": "right",
-    "vim.leader": "<space>",
-    "vim.smartRelativeLine": true,
-    "vim.useSystemClipboard": true,
-    "vim.easymotion": true,
-    "vim.sneak": true,
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<leader>",
-                "c"
-            ],
-            "commands": [
-                "editor.action.commentLine"
-            ]
+    "vscode-neovim.compositeKeys": {
+        "jj": {
+            "command": "vscode-neovim.escape"
         },
-        {
-            "before": [
-                ">"
-            ],
-            "commands": [
-                "editor.action.indentLines"
-            ]
-        },
-        {
-            "before": [
-                "<"
-            ],
-            "commands": [
-                "editor.action.outdentLines"
-            ]
-        },
-    ],
-    "vim.insertModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "j",
-                "k"
-            ],
-            "after": [
-                "<ESC>"
+        "jk": {
+            "command": "vscode-neovim.lua",
+            "args": [
+                [
+                    "local code = require('vscode')",
+                    "code.action('vscode-neovim.escape')",
+                    "code.action('workbench.action.files.save')",
+                ],
             ]
         }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "<C-h>"
-            ],
-            "after": [
-                "<C-w>",
-                "h"
-            ]
-        },
-        {
-            "before": [
-                "<C-j>"
-            ],
-            "after": [
-                "<C-w>",
-                "j"
-            ]
-        },
-        {
-            "before": [
-                "<C-k>"
-            ],
-            "after": [
-                "<C-w>",
-                "k"
-            ]
-        },
-        {
-            "before": [
-                "<C-l>"
-            ],
-            "after": [
-                "<C-w>",
-                "l"
-            ]
-        },
-        {
-            "before": [
-                "<Leader>",
-                "p"
-            ],
-            "commands": [
-                "workbench.action.showCommands",
-            ]
-        },
-        {
-            "before": [
-                "<Leader>",
-                "s"
-            ],
-            "commands": [
-                "workbench.action.gotoSymbol",
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "c"
-            ],
-            "commands": [
-                "editor.action.commentLine"
-            ]
-        },
-        {
-            "before": [
-                "J"
-            ],
-            "after": [
-                "1",
-                "0",
-                "j"
-            ]
-        },
-        {
-            "before": [
-                "K"
-            ],
-            "after": [
-                "1",
-                "0",
-                "k"
-            ]
-        },
-        {
-            "before": [
-                "H"
-            ],
-            "after": [
-                "^"
-            ]
-        },
-        {
-            "before": [
-                "L"
-            ],
-            "after": [
-                "$"
-            ]
-        },
-        {
-            "before": [
-                "<Leader>",
-                "j"
-            ],
-            "after": [
-                "J"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "f"
-            ],
-            "commands": [
-                "workbench.action.quickOpen"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "q"
-            ],
-            "commands": [
-                "workbench.action.closeActiveEditor"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "Q",
-            ],
-            "commands": [
-                "workbench.action.closeAllEditors"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "r",
-            ],
-            "after": [
-                "*",
-                "c",
-                "g",
-                "n"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "w"
-            ],
-            "commands": [
-                "workbench.action.files.save"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "z",
-                "c"
-            ],
-            "commands": [
-                "editor.foldLevel2"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "z",
-                "o"
-            ],
-            "commands": [
-                "editor.unfoldAll"
-            ]
-        },
-        {
-            "before": [
-                "<leader>",
-                "a"
-            ],
-            "commands": [
-                {
-                    "command": "vim.remap",
-                    "args": {
-                        "after": [
-                            "g",
-                            "g",
-                            "<S-v>",
-                            "G"
-                        ]
-                    }
-                }
-            ]
-        }
-    ],
+    },
+    "vscode-neovim.compositeTimeout": 300,
     "cursor.composer.shouldAutoScrollToBottom": false,
     "cursor.composer.shouldChimeAfterChatFinishes": true,
     "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.updateImportsOnFileMove.enabled": "always"
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "breadcrumbs.symbolPath": "off",
+    "breadcrumbs.filePath": "on",
+    "editor.formatOnSave": true,
+    "editor.lineNumbers": "relative"
 }
