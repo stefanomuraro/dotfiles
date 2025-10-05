@@ -13,11 +13,13 @@ cleanrepo() {
   fi
 
   echo "$gone_branches"
-  print -n "Do you want to delete all gone branches? (y/n): "
-  read choice
+  read -r -p "Do you want to delete all gone branches? [Y/n]: " choice
 
-  if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
+  choice=${choice:-Y}
+
+  if [[ "$choice" == [Yy] ]]; then
     gbgD
   fi
 }
+
 
