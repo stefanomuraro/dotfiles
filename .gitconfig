@@ -2,9 +2,7 @@
 	email = 66977688+stefanomuraro@users.noreply.github.com
 	name = Stefano Muraro
 [credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = !/usr/bin/gh auth git-credential
+    helper = !gh auth git-credential
 [core]
 	editor = nvim
 [push]
