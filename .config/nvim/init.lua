@@ -27,9 +27,6 @@ vim.opt.wrap = false
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
--- Enable true colors (for modern themes)
-vim.opt.termguicolors = true
-
 -- Some basic UI improvements
 vim.opt.cursorline = true
 vim.opt.signcolumn = "yes"
