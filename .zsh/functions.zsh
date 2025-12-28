@@ -54,10 +54,8 @@ ghpr() {
     echo "Checking repository: $current_repo"
 
     if [[ "$current_repo" == "ohmd-ui" ]]; then
-        echo "Using OhmD-UI settings..."
         gh pr create --repo mbahealthgroup/ohmd-ui --base "$base_branch" && gh pr view --web
     else
-        echo "Using default repository settings..."
         gh pr create --base "$base_branch" && gh pr view --web
     fi
 }
