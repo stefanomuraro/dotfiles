@@ -14,29 +14,36 @@ killport() {
 
 # Clean up local branches that are "gone" on the remote
 cleanrepo() {
-    echo "Fetching and pruning..."
+    echo "Fetching latest refs and pruning deleted branches..."
     git fetch --all --prune   # gfa
+    echo
 
     # List local branches whose upstream is gone
     local gone_branches
     gone_branches=$(git branch -vv | awk '/: gone]/{print $1}')   # gbg
 
     if [[ -z "$gone_branches" ]]; then
-        echo "✅ No branches to delete"
+        echo "No branches to clean. Everything is up to date."
         return
     fi
 
-    echo "Branches to be removed:"
+    echo "The following branches no longer exist upstream:"
+    echo "-----------------------------------------------"
     echo "$gone_branches"
+    echo "-----------------------------------------------"
+    echo
 
-    read -r "?Do you want to delete all gone branches? [Y/n]: "
+    read -r "?Delete ALL of these branches? [Y/n]: "
     local choice=${REPLY:-Y}
+    echo
 
     if [[ "$choice" == [Yy] ]]; then
+        echo "Deleting branches..."
         echo "$gone_branches" | xargs git branch -D   # gbgD
-        echo "Done."
+        echo
+        echo "Cleanup complete."
     else
-        echo "Operation cancelled."
+        echo "Cleanup cancelled. No branches were deleted."
     fi
 }
 
@@ -46,12 +53,13 @@ ghpr() {
     local top_level=$(git rev-parse --show-toplevel 2>/dev/null)
     
     if [[ -z "$top_level" ]]; then
-        echo "❌ Error: Not a git repository"
+        echo "Error: Not a git repository"
         return 1
     fi
 
     local current_repo=$(basename "$top_level")
     echo "Checking repository: $current_repo"
+    echo
 
     if [[ "$current_repo" == "ohmd-ui" ]]; then
         gh pr create --repo mbahealthgroup/ohmd-ui --base "$base_branch" && gh pr view --web
