@@ -15,7 +15,7 @@ alias lintelixir='[ -f "mix.exs" ] && mix format && mix credo --strict || echo "
 
 # --- Git ---
 alias updatefork="git fetch upstream && git merge upstream/develop && git push"
-alias amend="git commit --amend --no-edit"
+alias gcane="git commit --amend --no-edit"
 
 # --- Dotfiles Management (Bare Repo) ---
 alias cfg="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
