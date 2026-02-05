@@ -15,7 +15,7 @@ killport() {
 # Clean up local branches that are "gone" on the remote
 cleanrepo() {
     echo "Fetching latest refs and pruning deleted branches..."
-    git fetch --all --prune   # gfa
+    git fetch --all --prune 
     echo
 
     # List local branches whose upstream is gone
@@ -44,7 +44,26 @@ cleanrepo() {
         echo "Cleanup complete."
     else
         echo "Cleanup cancelled. No branches were deleted."
+   fi
+}
+
+update-branch() {
+    echo "Fetching all..."
+    git fetch --all --prune 
+    echo
+
+    if git remote get-url upstream >/dev/null 2>&1; then
+        echo "Merging upstream/develop..."
+        git merge upstream/develop
+    else
+        echo "Merging origin/develop..."
+        git merge origin/develop
     fi
+
+    echo
+    echo "Pushing to remote repository..."
+
+    git push origin 
 }
 
 # Create a PR based on the current repository context
@@ -67,3 +86,4 @@ ghpr() {
         gh pr create --base "$base_branch" && gh pr view --web
     fi
 }
+

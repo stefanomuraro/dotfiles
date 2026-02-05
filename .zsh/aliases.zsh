@@ -14,7 +14,6 @@ alias lintelixir='[ -f "mix.exs" ] && mix format && mix credo --strict || echo "
 [ -f "$HOME/scripts/run-ohmd-elixir.sh" ] && alias runohmd="$HOME/scripts/run-ohmd-elixir.sh"
 
 # --- Git ---
-alias updatefork="git fetch upstream && git merge upstream/develop && git push"
 alias gcane="git commit --amend --no-edit"
 
 # --- Dotfiles Management (Bare Repo) ---
