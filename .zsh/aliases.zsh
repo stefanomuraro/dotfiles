@@ -2,14 +2,7 @@
 # ALIASES
 # ==============================================================================
 
-# --- Development Workflow ---
-alias v="nvim"
-
-# Only run lint if mix.exs exists to avoid errors in non-elixir folders
-alias lintelixir='[ -f "mix.exs" ] && mix format && mix credo --strict || echo "Not an Elixir project"'
-
 # --- Ohmd Scripts ---
-# Changed -d to -f to check for the specific script files
 [ -f "$HOME/scripts/open-ohmd-workspace.sh" ] && alias ohmd="$HOME/scripts/open-ohmd-workspace.sh"
 [ -f "$HOME/scripts/run-ohmd-elixir.sh" ] && alias runohmd="$HOME/scripts/run-ohmd-elixir.sh"
 
@@ -18,7 +11,17 @@ alias gcane="git commit --amend --no-edit"
 
 # --- Dotfiles Management (Bare Repo) ---
 alias cfg="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
-alias zshcfg="nvim ~/.zshrc"
-alias aliascfg="nvim ~/.zsh/aliases.zsh"
-alias funccfg="nvim ~/.zsh/functions.zsh"
-alias sourcezsh="source ~/.zshrc"
+
+# --- Zsh Management (Auto-reload on close) ---
+alias zr="edit_zsh ~/.zshrc"
+alias za="edit_zsh ~/.zsh/aliases.zsh"
+alias zf="edit_zsh ~/.zsh/functions.zsh"
+
+# --- Shortcuts ---
+alias v="nvim"
+
+# --- Custom Function Mappings ---
+alias le=lint_elixir
+alias kp=kill_port
+alias ub=update_branch
+alias cb=clean_branches
