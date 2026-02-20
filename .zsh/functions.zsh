@@ -126,3 +126,13 @@ lint_elixir() {
         echo "Not an Elixir project."
     fi
 }
+
+run_phx_server() {
+    if [[ -f "mix.exs" ]] && mix help phx.server >/dev/null 2>&1; then
+        echo "Starting Phoenix server (iex -S mix phx.server)..."
+        iex -S mix phx.server
+    else
+        echo "Not a Phoenix project."
+    fi
+}
+

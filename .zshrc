@@ -28,7 +28,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export ZSH_CUSTOM="$HOME/.zsh" 
 
 ZSH_THEME="neo"
-plugins=(git asdf)
+plugins=(git asdf direnv)
 
 # Load Oh My Zsh
 [ -f "$ZSH/oh-my-zsh.sh" ] && source "$ZSH/oh-my-zsh.sh"

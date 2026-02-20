@@ -4,7 +4,6 @@
 
 # --- Ohmd Scripts ---
 [ -f "$HOME/scripts/open-ohmd-workspace.sh" ] && alias ohmd="$HOME/scripts/open-ohmd-workspace.sh"
-[ -f "$HOME/scripts/run-ohmd-elixir.sh" ] && alias runohmd="$HOME/scripts/run-ohmd-elixir.sh"
 
 # --- Git ---
 alias gcane="git commit --amend --no-edit"
@@ -21,6 +20,7 @@ alias zf="edit_zsh ~/.zsh/functions.zsh"
 alias v="nvim"
 
 # --- Custom Function Mappings ---
+alias rps=run_phx_server
 alias le=lint_elixir
 alias kp=kill_port
 alias ub=update_branch
