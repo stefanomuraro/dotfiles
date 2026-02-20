@@ -15,6 +15,7 @@ alias cfg="/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias zr="edit_zsh ~/.zshrc"
 alias za="edit_zsh ~/.zsh/aliases.zsh"
 alias zf="edit_zsh ~/.zsh/functions.zsh"
+alias zs="source ~/.zshrc"
 
 # --- Shortcuts ---
 alias v="nvim"
