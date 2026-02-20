@@ -10,14 +10,17 @@ export ASDF_DATA_DIR="${ASDF_DATA_DIR:-$HOME/.asdf}"
 [ -d "$ASDF_DATA_DIR" ] && export PATH="$ASDF_DATA_DIR/shims:$PATH"
 
 # Neovim
-[ -d "/opt/nvim" ] && export PATH="/opt/nvim:$PATH"
+if command -v nvim >/dev/null 2>&1; then
+  export EDITOR="nvim"
+  export VISUAL="nvim"
+fi
 
 # Bun Configuration
 export BUN_INSTALL="$HOME/.bun"
 [ -d "$BUN_INSTALL" ] && export PATH="$BUN_INSTALL/bin:$PATH"
 
 # .NET Configuration
-[ -d "$HOME/.dotnet" ] && export DOTNET_ROOT="$HOME/.dotnet" && export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
+[ -d "$HOME/.dotnet" ] && export DOTNET_ROOT="$HOME/.dotnet" PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
 
 # ==============================================================================
 # 2. OH MY ZSH CONFIGURATION

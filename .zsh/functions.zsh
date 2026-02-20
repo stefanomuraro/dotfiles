@@ -135,4 +135,3 @@ run_phx_server() {
         echo "Not a Phoenix project."
     fi
 }
-
