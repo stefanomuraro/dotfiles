@@ -27,8 +27,15 @@ export ZSH="$HOME/.oh-my-zsh"
 # Tell OMZ to look here for custom themes/plugins (~/.zsh/themes/neo.zsh-theme)
 export ZSH_CUSTOM="$HOME/.zsh" 
 
-ZSH_THEME="neo"
-plugins=(git asdf direnv)
+ZSH_THEME="robbyrussell"
+plugins=(
+    git
+    asdf
+    direnv
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    vi-mode
+)
 
 # Load Oh My Zsh
 [ -f "$ZSH/oh-my-zsh.sh" ] && source "$ZSH/oh-my-zsh.sh"
