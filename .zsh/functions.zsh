@@ -31,7 +31,7 @@ kill_port() {
 }
 
 # Clean up local branches that are "gone" on the remote
-clean_branches() {
+clean_gone() {
     echo "Fetching latest refs and pruning deleted branches..."
     git fetch --all --prune 
     echo
@@ -77,7 +77,7 @@ update_branch() {
     
     if git merge "${target_remote}/develop"; then
         echo "\nMerge successful. Updating your fork (origin)..."
-        git push origin HEAD
+        git push origin HEAD --no-verify
     else
         echo "\n[!] Merge conflicts detected. Resolve them manually."
         echo "[!] Push aborted to prevent breaking remote."
@@ -117,21 +117,3 @@ gh_pr() {
     fi
 }
 
-# Run Elixir style checks: mix format and credo --strict
-lint_elixir() {
-    if [[ -f "mix.exs" ]]; then
-        echo "Running Elixir linting (Format + Credo)..."
-        mix format && mix credo --strict
-    else
-        echo "Not an Elixir project."
-    fi
-}
-
-run_phx_server() {
-    if [[ -f "mix.exs" ]] && mix help phx.server >/dev/null 2>&1; then
-        echo "Starting Phoenix server (iex -S mix phx.server)..."
-        iex -S mix phx.server
-    else
-        echo "Not a Phoenix project."
-    fi
-}
