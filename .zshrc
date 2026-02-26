@@ -1,5 +1,5 @@
 # ==============================================================================
-# 1. ENVIRONMENT & PATHS (Conditional)
+# 1. ENVIRONMENT & PATHS
 # ==============================================================================
 
 # Core Local Binaries
@@ -18,9 +18,6 @@ fi
 # Bun Configuration
 export BUN_INSTALL="$HOME/.bun"
 [ -d "$BUN_INSTALL" ] && export PATH="$BUN_INSTALL/bin:$PATH"
-
-# .NET Configuration
-[ -d "$HOME/.dotnet" ] && export DOTNET_ROOT="$HOME/.dotnet" PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
 
 # ==============================================================================
 # 2. OH MY ZSH CONFIGURATION
