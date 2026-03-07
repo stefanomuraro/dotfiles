@@ -19,6 +19,7 @@ alias zs="source ~/.zshrc"
 
 # --- Other Shortcuts ---
 alias v="nvim"
+alias t="tmux"
 
 alias run_phx_server="iex -S mix phx.server"
 alias rps=run_phx_server
