@@ -5,6 +5,9 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Scroll offset
+vim.opt.scrolloff = 5
+
 -- Enable mouse support
 vim.opt.mouse = "a"
 
@@ -100,8 +103,6 @@ map('n', '<Leader>c', comment_cmd, opts)
 -- Cursor movement
 map('n', 'J', '10j', opts)
 map('n', 'K', '10k', opts)
-map('n', 'H', '^', opts)
-map('n', 'L', '$', opts)
 
 -- Other
 map('n', '<Leader>j', 'J', opts)
