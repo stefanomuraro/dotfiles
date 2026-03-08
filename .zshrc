@@ -53,6 +53,8 @@ plugins=(
 # Load Custom Aliases and Functions
 [ -f "$ZSH_CUSTOM/aliases.zsh" ] && source "$ZSH_CUSTOM/aliases.zsh"
 [ -f "$ZSH_CUSTOM/functions.zsh" ] && source "$ZSH_CUSTOM/functions.zsh"
-#
+
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+eval "$(zoxide init zsh)"

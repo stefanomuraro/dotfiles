@@ -17,7 +17,14 @@ alias za="edit_zsh ~/.zsh/aliases.zsh"
 alias zf="edit_zsh ~/.zsh/functions.zsh"
 alias zs="source ~/.zshrc"
 
-# --- Other Shortcuts ---
+alias ls="eza -lh --group-directories-first --icons=auto"
+alias lsa="ls -a"
+alias lt="eza --tree --level=2 --long --icons --git"
+alias lta="lt -a"
+
+alias cd="z"
+
+# --- Misc ---
 alias v="nvim"
 alias t="tmux"
 
