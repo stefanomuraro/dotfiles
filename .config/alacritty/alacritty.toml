@@ -9,9 +9,6 @@ padding.y = 5
 
 decorations = "None"
 
-opacity = 0.8
-blur = true
-
 option_as_alt = "Both"
 
 [font]
