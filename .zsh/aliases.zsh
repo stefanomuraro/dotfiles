@@ -28,11 +28,9 @@ alias cd="z"
 alias v="nvim"
 alias t="tmux"
 
-alias run_phx_server="iex -S mix phx.server"
-alias rps=run_phx_server
+alias rps="iex -S mix phx.server" # run phoenix server
 
-alias lint_elixir="mix format && mix credo --strict"
-alias le=lint_elixir
+alias le="mix format && mix credo --strict" # lint elixir
 
 alias kp=kill_port
 alias ub=update_branch
