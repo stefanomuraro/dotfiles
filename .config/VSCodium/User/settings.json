@@ -1,0 +1,81 @@
+{
+    // -----------------------------
+    // Editor
+    // -----------------------------
+    "editor.cursorBlinking": "phase",
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "editor.formatOnSave": true,
+    "editor.guides.indentation": false,
+    "editor.letterSpacing": 0.4,
+    "editor.lineHeight": 22,
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "editor.overviewRulerBorder": false,
+    "editor.renderLineHighlight": "none",
+    "editor.smoothScrolling": true,
+    // -----------------------------
+    // Diff Editor
+    // -----------------------------
+    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.renderSideBySide": false,
+    // -----------------------------
+    // Breadcrumbs
+    // -----------------------------
+    "breadcrumbs.filePath": "on",
+    "breadcrumbs.symbolPath": "off",
+    // -----------------------------
+    // Git
+    // -----------------------------
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    // -----------------------------
+    // JavaScript / TypeScript
+    // -----------------------------
+    "js/ts.updateImportsOnFileMove.enabled": "always",
+    // -----------------------------
+    // Terminal
+    // -----------------------------
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "terminal.integrated.fontSize": 13,
+    // -----------------------------
+    // Window
+    // -----------------------------
+    "window.commandCenter": false,
+    "window.customTitleBarVisibility": "windowed",
+    "window.newWindowProfile": "Default",
+    "window.title": "${rootName}",
+    // -----------------------------
+    // Workbench / Layout
+    // -----------------------------
+    "workbench.activityBar.location": "hidden",
+    "workbench.layoutControl.enabled": false,
+    "workbench.sideBar.location": "left",
+    // -----------------------------
+    // Extensions
+    // -----------------------------
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    // -----------------------------
+    // VSCode Neovim
+    // -----------------------------
+    "vscode-neovim.compositeTimeout": 300,
+    "vscode-neovim.compositeKeys": {
+        "jj": {
+            "command": "vscode-neovim.escape"
+        },
+        "jk": {
+            "command": "vscode-neovim.lua",
+            "args": [
+                [
+                    "local code = require('vscode')",
+                    "code.action('vscode-neovim.escape')",
+                    "code.action('workbench.action.files.save')"
+                ]
+            ]
+        }
+    }
+}
+
