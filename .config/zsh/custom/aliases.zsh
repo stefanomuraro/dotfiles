@@ -12,10 +12,10 @@ alias cfg="git --git-dir=$HOME/.cfg/ --work-tree=$HOME"
 alias gcane="git commit --amend --no-edit"
 
 # --- Zsh Management (Auto-reload on close) ---
-alias zr="edit_zsh ~/.zshrc"
-alias za="edit_zsh ~/.zsh/aliases.zsh"
-alias zf="edit_zsh ~/.zsh/functions.zsh"
-alias zs="source ~/.zshrc"
+alias zr="edit_zsh $ZDOTDIR/.zshrc"
+alias za="edit_zsh $ZSH_CUSTOM/aliases.zsh"
+alias zf="edit_zsh $ZSH_CUSTOM/functions.zsh"
+alias zs="source $ZDOTDIR/.zshrc"
 
 alias ls="eza -lh --group-directories-first --icons=auto"
 alias lsa="ls -a"
