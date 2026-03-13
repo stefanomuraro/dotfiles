@@ -5,11 +5,16 @@
     helper = !gh auth git-credential
 [core]
 	editor = nvim
+	pager = delta
 [push]
 	autoSetupRemote = true
 [diff]
 	tool = nvimdiff
-[difftool "vscode"]
-	cmd = code --wait --diff \"\" \"\"
 [difftool]
 	prompt = true
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	side-by-side = false
+	line-numbers = true
