@@ -5,7 +5,7 @@
 # Internal helper to edit and auto-source zsh files
 edit_zsh() {
     if nvim "$1"; then
-        source ~/.zshrc
+        source $ZDOTDIR/.zshrc
         echo "Successfully reloaded: $(basename "$1")"
     else
         echo "Editor exited with an error. Config not reloaded."
