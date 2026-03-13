@@ -27,6 +27,7 @@ alias cd="z"
 # --- Misc ---
 alias v="nvim"
 alias t="tmux"
+alias c="clear"
 
 alias rps="iex -S mix phx.server" # run phoenix server
 
