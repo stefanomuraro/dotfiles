@@ -49,7 +49,6 @@ plugins=(
     direnv
     zsh-autosuggestions
     zsh-syntax-highlighting
-    vi-mode
 )
 
 # 5. Load Oh My Zsh
