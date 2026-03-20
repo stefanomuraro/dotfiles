@@ -29,6 +29,7 @@ alias lta="lt -a"
 alias cd="z"
 alias grep="rg"
 alias find="fd"
+alias cat="bat"
 
 # shortcuts
 alias v="nvim"
