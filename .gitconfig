@@ -16,5 +16,6 @@
 	diffFilter = delta --color-only
 [delta]
 	navigate = true
-	side-by-side = false
-	line-numbers = true
+	dark = true
+[merge]
+	conflictStyle = zdiff3
